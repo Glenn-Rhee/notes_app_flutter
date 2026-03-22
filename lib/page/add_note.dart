@@ -18,6 +18,12 @@ class AddNote extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
       ),
+      body: const Center(
+        child: Text(
+          "Silahkan tambahkan note...",
+          style: TextStyle(color: Colors.white70),
+        ),
+      ),
     );
   }
 }
