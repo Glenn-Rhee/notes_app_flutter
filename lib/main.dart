@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/helper/app_navigator.dart';
 import 'package:notes_app/notes.dart';
-import 'package:notes_app/page/add_note.dart';
 
 void main() {
   List<Note> notes = Notes().getNotes() ?? [];
@@ -86,9 +86,7 @@ class MyApp extends StatelessWidget {
           }).toList(),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () => {
-           
-          },
+          onPressed: () => AppNavigator.goToAddNote(context),
           child: Icon(Icons.add),
         ),
       ),
