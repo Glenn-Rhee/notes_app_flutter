@@ -48,8 +48,21 @@ class AddNote extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 12),
+            // content
+            Expanded(
+              child: TextField(
+                style: const TextStyle(color: Colors.white, fontSize: 16),
+                maxLines: null,
+                expands: true,
+                textAlignVertical: TextAlignVertical.top,
+                decoration: InputDecoration(
+                  hintText: "Note something down",
+                  hintStyle: const TextStyle(color: Colors.white70),
 
+                ),
+              ),
+            ),
           ],
         ),
       ),
