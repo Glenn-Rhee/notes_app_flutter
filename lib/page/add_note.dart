@@ -24,10 +24,33 @@ class AddNote extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
       ),
-      body: const Center(
-        child: Text(
-          "Silahkan tambahkan note...",
-          style: TextStyle(color: Colors.white70),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Title
+            TextField(
+              style: const TextStyle(color: Colors.white, fontSize: 18),
+              decoration: InputDecoration(
+                hintText: "Title",
+                hintStyle: const TextStyle(color: Colors.white70),
+                filled: false,
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 1.2,
+                  vertical: 6.0,
+                ),
+                enabledBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey, width: 0.7),
+                ),
+                focusedBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+
+          ],
         ),
       ),
     );
