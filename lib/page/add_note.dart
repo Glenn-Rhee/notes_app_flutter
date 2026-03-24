@@ -25,12 +25,15 @@ class AddNote extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
         actions: [
-          const Text(
-            "Save",
-            style: TextStyle(
-              color: Colors.green,
-              fontWeight: FontWeight(700),
-              fontSize: 18.0,
+          IconButton(
+            onPressed: () {},
+            icon: const Text(
+              "Save",
+              style: TextStyle(
+                color: Colors.green,
+                fontWeight: FontWeight(700),
+                fontSize: 18.0,
+              ),
             ),
           ),
         ],
