@@ -12,7 +12,7 @@ class AddNote extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(Icons.chevron_left),
+          icon: Icon(Icons.arrow_back, size: 22.0, color: Colors.white),
         ),
         title: const Text(
           "Tambah Note",
