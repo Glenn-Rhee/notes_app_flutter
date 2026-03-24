@@ -30,7 +30,7 @@ class AddNote extends StatelessWidget {
             style: TextStyle(
               color: Colors.green,
               fontWeight: FontWeight(800),
-              fontSize: 19.0,
+              fontSize: 18.0,
             ),
           ),
         ],
