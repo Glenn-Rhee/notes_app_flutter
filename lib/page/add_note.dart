@@ -8,6 +8,12 @@ class AddNote extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.chevron_left),
+        ),
         title: const Text(
           "Tambah Note",
           style: TextStyle(
