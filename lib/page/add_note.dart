@@ -6,7 +6,7 @@ class AddNote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text(
           "Tambah Note",
