@@ -27,14 +27,7 @@ class AddNote extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Text(
-              "Save",
-              style: TextStyle(
-                color: Colors.green,
-                fontWeight: FontWeight(700),
-                fontSize: 18.0,
-              ),
-            ),
+            icon: const Icon(Icons.save, color: Colors.green),
           ),
         ],
       ),
