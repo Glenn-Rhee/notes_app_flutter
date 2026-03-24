@@ -8,6 +8,7 @@ class AddNote extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        actionsPadding: const EdgeInsets.all(16),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -23,6 +24,16 @@ class AddNote extends StatelessWidget {
           ),
         ),
         backgroundColor: Colors.transparent,
+        actions: [
+          const Text(
+            "Save",
+            style: TextStyle(
+              color: Colors.green,
+              fontWeight: FontWeight(800),
+              fontSize: 19.0,
+            ),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -59,7 +70,6 @@ class AddNote extends StatelessWidget {
                 decoration: InputDecoration(
                   hintText: "Note something down",
                   hintStyle: const TextStyle(color: Colors.white70),
-
                 ),
               ),
             ),
