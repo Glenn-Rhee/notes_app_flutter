@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
-class AddNote extends StatelessWidget {
+class _AddNoteState extends State<AddNote> {
   final TextEditingController titleController = TextEditingController();
   final TextEditingController contentController = TextEditingController();
-  const AddNote({super.key});
+
+  @override
+  void dispose() {
+    titleController.dispose();
+    contentController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,4 +84,11 @@ class AddNote extends StatelessWidget {
       ),
     );
   }
+}
+
+class AddNote extends StatefulWidget {
+  const AddNote({super.key});
+
+  @override
+  State<AddNote> createState() => _AddNoteState();
 }
