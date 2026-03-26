@@ -62,6 +62,7 @@ class AddNote extends StatelessWidget {
             // content
             Expanded(
               child: TextField(
+                controller: contentController,
                 style: const TextStyle(color: Colors.white, fontSize: 16),
                 maxLines: null,
                 expands: true,
