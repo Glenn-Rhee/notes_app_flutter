@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AddNote extends StatelessWidget {
   final TextEditingController titleController = TextEditingController();
+  final TextEditingController contentController = TextEditingController();
   const AddNote({super.key});
 
   @override
