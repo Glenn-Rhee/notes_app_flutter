@@ -40,12 +40,23 @@ class _AddNoteState extends State<AddNote> {
                 showDialog(
                   context: context,
                   builder: (context) {
-                    return AlertDialog(
-                      title: const Text(
-                        "Title and content cannot be empty",
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight(600),
+                    return Align(
+                      alignment: Alignment.topCenter,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: Material(
+                          borderRadius: BorderRadius.circular(14),
+                          child: Container(
+                            width: 300,
+                            padding: const EdgeInsets.all(16),
+                            child: Text(
+                              "Title and content cannot be empty!",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight(500),
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     );
