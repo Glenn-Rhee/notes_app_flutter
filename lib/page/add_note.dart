@@ -40,6 +40,9 @@ class _AddNoteState extends State<AddNote> {
                 showDialog(
                   context: context,
                   builder: (context) {
+                    Future.delayed(Duration(seconds: 1), () {
+                      Navigator.of(context).pop();
+                    });
                     return Align(
                       alignment: Alignment.topCenter,
                       child: Padding(
