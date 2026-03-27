@@ -37,7 +37,17 @@ class _AddNoteState extends State<AddNote> {
             onPressed: () {
               if (titleController.text.trim() == "" ||
                   contentController.text.trim() == "") {
-              
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: Text(
+                        "Title and content cannot be empty",
+                        style: TextStyle(),
+                      ),
+                    );
+                  },
+                );
               }
               AlertDialog(icon: Text("Cihuy"));
             },
