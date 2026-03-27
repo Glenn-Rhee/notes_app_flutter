@@ -34,7 +34,13 @@ class _AddNoteState extends State<AddNote> {
         backgroundColor: Colors.transparent,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              if (titleController.text.trim() == "" ||
+                  contentController.text.trim() == "") {
+              
+              }
+              AlertDialog(icon: Text("Cihuy"));
+            },
             icon: const Icon(Icons.save, color: Colors.green),
           ),
         ],
