@@ -39,9 +39,10 @@ class _AddNoteState extends State<AddNote> {
                   contentController.text.trim() == "") {
                 showDialog(
                   context: context,
-                  builder: (context) {
-                    Future.delayed(Duration(seconds: 1), () {
-                      Navigator.of(context).pop();
+                  builder: (dialogCtx) {
+                    Future.delayed(const Duration(seconds: 1), () {
+                      // ignore: use_build_context_synchronously
+                      Navigator.of(dialogCtx).pop();
                     });
                     return Align(
                       alignment: Alignment.topCenter,
