@@ -14,34 +14,38 @@ class _AddNoteState extends State<AddNote> {
   void _handleSave() {
     if (titleController.text.trim() == "" ||
         contentController.text.trim() == "") {
-      showDialog(
-        context: context,
-        builder: (dialogCtx) {
-          Future.delayed(const Duration(seconds: 1), () {
-            // ignore: use_build_context_synchronously
-            Navigator.of(dialogCtx).pop();
-          });
-          return Align(
-            alignment: Alignment.topCenter,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Material(
-                borderRadius: BorderRadius.circular(14),
-                child: Container(
-                  width: 300,
-                  padding: const EdgeInsets.all(16),
-                  child: Text(
-                    "Title and content cannot be empty!",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight(500)),
-                  ),
+      _handleError();
+      return;
+    }
+  }
+
+  void _handleError() {
+    showDialog(
+      context: context,
+      builder: (dialogCtx) {
+        Future.delayed(const Duration(seconds: 1), () {
+          // ignore: use_build_context_synchronously
+          Navigator.of(dialogCtx).pop();
+        });
+        return Align(
+          alignment: Alignment.topCenter,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: Material(
+              borderRadius: BorderRadius.circular(14),
+              child: Container(
+                width: 300,
+                padding: const EdgeInsets.all(16),
+                child: Text(
+                  "Title and content cannot be empty!",
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight(500)),
                 ),
               ),
             ),
-          );
-        },
-      );
-      return;
-    }
+          ),
+        );
+      },
+    );
   }
 
   @override
