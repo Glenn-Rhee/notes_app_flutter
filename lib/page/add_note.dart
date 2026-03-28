@@ -67,7 +67,6 @@ class _AddNoteState extends State<AddNote> {
                   },
                 );
               }
-              AlertDialog(icon: Text("Cihuy"));
             },
             icon: const Icon(Icons.save, color: Colors.green),
           ),
