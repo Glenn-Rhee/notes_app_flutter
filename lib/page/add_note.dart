@@ -66,6 +66,7 @@ class _AddNoteState extends State<AddNote> {
                     );
                   },
                 );
+                return;
               }
             },
             icon: const Icon(Icons.save, color: Colors.green),
