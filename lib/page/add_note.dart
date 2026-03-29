@@ -18,6 +18,7 @@ class _AddNoteState extends State<AddNote> {
       return;
     }
     var title = titleController.text;
+    var content = contentController.text;
   }
 
   void _handleError() {
