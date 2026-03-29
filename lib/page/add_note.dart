@@ -20,9 +20,15 @@ class _AddNoteState extends State<AddNote> {
     final url = Uri.parse("http://localhost:8080/");
     var title = titleController.text;
     var content = contentController.text;
+
+    try {
+      
+    } catch (e) {
+      
+    }
   }
 
-  void _handleError() {
+  void _handleError(String message) {
     showDialog(
       context: context,
       builder: (dialogCtx) {
