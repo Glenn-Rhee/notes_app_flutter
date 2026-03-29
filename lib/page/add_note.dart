@@ -17,6 +17,7 @@ class _AddNoteState extends State<AddNote> {
       _handleError();
       return;
     }
+    final url = Uri.parse("http://localhost:8080/");
     var title = titleController.text;
     var content = contentController.text;
   }
