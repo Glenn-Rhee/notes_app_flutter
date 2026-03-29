@@ -14,18 +14,14 @@ class _AddNoteState extends State<AddNote> {
   void _handleSave() {
     if (titleController.text.trim() == "" ||
         contentController.text.trim() == "") {
-      _handleError();
+      _handleError("Title and content cannot be empty!");
       return;
     }
     final url = Uri.parse("http://localhost:8080/");
     var title = titleController.text;
     var content = contentController.text;
 
-    try {
-      
-    } catch (e) {
-      
-    }
+    try {} catch (e) {}
   }
 
   void _handleError(String message) {
@@ -46,7 +42,7 @@ class _AddNoteState extends State<AddNote> {
                 width: 300,
                 padding: const EdgeInsets.all(16),
                 child: Text(
-                  "Title and content cannot be empty!",
+                  message,
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight(500)),
                 ),
               ),
