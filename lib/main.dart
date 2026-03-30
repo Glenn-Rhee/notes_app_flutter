@@ -4,12 +4,12 @@ import 'package:notes_app/notes.dart';
 
 void main() {
   List<Note> notes = Notes().getNotes() ?? [];
-  runApp(MyApp(notes: notes));
+  runApp(Home(notes: notes));
 }
 
-class MyApp extends StatelessWidget {
+class Home extends StatelessWidget {
   final List<Note> notes;
-  const MyApp({super.key, required this.notes});
+  const Home({super.key, required this.notes});
 
   @override
   Widget build(BuildContext context) {
