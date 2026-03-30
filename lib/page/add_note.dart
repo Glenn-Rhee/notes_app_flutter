@@ -17,7 +17,7 @@ class _AddNoteState extends State<AddNote> {
       _handleError("Title and content cannot be empty!");
       return;
     }
-    final url = Uri.parse("http://localhost:8080/");
+    final url = Uri.parse("http://localhost:8080");
     var title = titleController.text;
     var content = contentController.text;
 
