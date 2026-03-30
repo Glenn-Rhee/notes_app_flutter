@@ -17,7 +17,7 @@ class _AddNoteState extends State<AddNote> {
   Future<void> _handleSave() async {
     if (titleController.text.trim() == "" ||
         contentController.text.trim() == "") {
-      _handleError("Title and content cannot be empty!");
+      _showDialog("Title and content cannot be empty!");
       return;
     }
     final url = Uri.parse("http://10.0.2.2:8080/notes");
@@ -32,7 +32,7 @@ class _AddNoteState extends State<AddNote> {
       );
 
       if (response.statusCode == 200 || response.statusCode == 201) {
-        print("Note saved successfully!");
+        _showDialog("Note saved successfully!");
       } else {
         throw Exception("Failed to save note!");
       }
@@ -41,7 +41,7 @@ class _AddNoteState extends State<AddNote> {
     }
   }
 
-  void _handleError(String message) {
+  void _showDialog(String message) {
     showDialog(
       context: context,
       builder: (dialogCtx) {
