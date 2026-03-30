@@ -12,11 +12,11 @@ import 'package:notes_app/main.dart';
 import 'package:notes_app/notes.dart';
 
 void main() {
-   List<Note> notes = Notes().getNotes() ?? [];
+  List<Note> notes = Notes().getNotes() ?? [];
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
 
-    await tester.pumpWidget(MyApp(notes: notes,));
+    await tester.pumpWidget(Home(notes: notes));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

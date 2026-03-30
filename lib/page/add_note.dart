@@ -32,7 +32,9 @@ class _AddNoteState extends State<AddNote> {
       );
 
       if (response.statusCode == 200 || response.statusCode == 201) {
-        _showDialog("Note saved successfully!");
+        if (!mounted) return;
+
+        Navigator.pop(context, "Success");
       } else {
         throw Exception("Failed to save note!");
       }
