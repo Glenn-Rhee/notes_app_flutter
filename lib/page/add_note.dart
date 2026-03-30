@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class _AddNoteState extends State<AddNote> {
   final TextEditingController titleController = TextEditingController();
@@ -11,17 +14,31 @@ class _AddNoteState extends State<AddNote> {
     super.dispose();
   }
 
-  void _handleSave() {
+  Future<void> _handleSave() async {
     if (titleController.text.trim() == "" ||
         contentController.text.trim() == "") {
       _handleError("Title and content cannot be empty!");
       return;
     }
-    final url = Uri.parse("http://localhost:8080");
+    final url = Uri.parse("http://10.0.2.2:8080/notes");
     var title = titleController.text;
     var content = contentController.text;
 
-    try {} catch (e) {}
+    try {
+      final response = await http.post(
+        url,
+        headers: {"Content-Type": "application/json"},
+        body: jsonEncode({"title": title, "content": content}),
+      );
+
+      if (response.statusCode == 200 || response.statusCode == 201) {
+        print("Note saved successfully!");
+      } else {
+        throw Exception("Failed to save note!");
+      }
+    } catch (e) {
+      print("Error saving note: $e");
+    }
   }
 
   void _handleError(String message) {
