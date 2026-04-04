@@ -3,13 +3,12 @@ import 'package:notes_app/helper/app_navigator.dart';
 import 'package:notes_app/notes.dart';
 
 void main() {
-  List<Note> notes = Notes().getNotes() ?? [];
-  runApp(Home(notes: notes));
+  runApp(const MaterialApp(home: Home(),));
 }
 
 class Home extends StatefulWidget {
   final List<Note> notes;
-  const Home({super.key, required this.notes});
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
