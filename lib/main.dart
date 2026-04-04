@@ -7,7 +7,7 @@ void main() {
   runApp(Home(notes: notes));
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   final List<Note> notes;
   const Home({super.key, required this.notes});
 
