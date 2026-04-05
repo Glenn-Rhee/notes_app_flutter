@@ -12,7 +12,6 @@ import 'package:notes_app/main.dart';
 import 'package:notes_app/notes.dart';
 
 void main() {
-  List<Note> notes = Notes().getNotes() ?? [];
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
 
