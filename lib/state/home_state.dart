@@ -3,7 +3,7 @@ import 'package:notes_app/main.dart';
 import 'package:notes_app/notes.dart';
 import 'package:notes_app/helper/app_navigator.dart';
 
-class _HomeState extends State<Home> {
+class HomeState extends State<Home> {
   List<Note> notes = [];
   bool isLoading = true;
 
