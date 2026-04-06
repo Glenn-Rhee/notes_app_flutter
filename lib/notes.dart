@@ -1,3 +1,5 @@
+import 'package:http/http.dart' as http;
+
 class Note {
   String id;
   String title;
@@ -15,6 +17,7 @@ class Note {
 class Notes {
   Future<List<Note>?> getNotes() async {
     final url = Uri.parse("http://10.0.2.2:8080/notes");
+    final response = await http.get(url);
     return [
       Note(
         id: "1",
