@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 
 class Note {
@@ -18,6 +20,10 @@ class Notes {
   Future<List<Note>?> getNotes() async {
     final url = Uri.parse("http://10.0.2.2:8080/notes");
     final response = await http.get(url);
+    if (response.statusCode == 200 || response.statusCode == 201){
+      final dataLists = jsonDecode(response.body)["data"];
+      
+    }
     return [
       Note(
         id: "1",
