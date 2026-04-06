@@ -13,7 +13,7 @@ class Note {
 }
 
 class Notes {
-  List<Note>? getNotes() {
+  Future<List<Note>?> getNotes() async {
     final url = Uri.parse("http://10.0.2.2:8080/notes");
     return [
       Note(
