@@ -31,7 +31,7 @@ class Notes {
     final response = await http.get(url);
     if (response.statusCode == 200 || response.statusCode == 201) {
       final dataLists = jsonDecode(response.body)["data"] as List;
-      return dataLists.map((data) => Note.fromJson(data))
+      return dataLists.map((data) => Note.fromJson(data)).toList();
     }
     return [
       Note(
