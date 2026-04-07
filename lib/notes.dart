@@ -34,7 +34,7 @@ class Notes {
       return dataLists.map((data) => Note.fromJson(data)).toList();
     }
     
-    throw Exception()
+    throw Exception("Failed to load notes!");
     return [
       Note(
         id: "1",
