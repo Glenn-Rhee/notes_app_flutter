@@ -33,27 +33,7 @@ class Notes {
       final dataLists = jsonDecode(response.body)["data"] as List;
       return dataLists.map((data) => Note.fromJson(data)).toList();
     }
-    
+
     throw Exception("Failed to load notes!");
-    return [
-      Note(
-        id: "1",
-        title: "Belajar Flutter",
-        content: "Hari ini belajar ListView",
-        createdAt: DateTime.now(),
-      ),
-      Note(
-        id: "2",
-        title: "Project",
-        content: "Bikin Notes App",
-        createdAt: DateTime.now(),
-      ),
-      Note(
-        id: "3",
-        title: "Project 1",
-        content: "Bikin Notes App 1",
-        createdAt: DateTime.now(),
-      ),
-    ];
   }
 }
