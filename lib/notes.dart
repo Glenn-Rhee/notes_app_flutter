@@ -33,6 +33,8 @@ class Notes {
       final dataLists = jsonDecode(response.body)["data"] as List;
       return dataLists.map((data) => Note.fromJson(data)).toList();
     }
+    
+    throw Exception()
     return [
       Note(
         id: "1",
