@@ -30,6 +30,7 @@ class HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    print("cihuy build");
     return MaterialApp(
       home: Builder(
         builder: (context) {
