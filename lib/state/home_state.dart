@@ -6,7 +6,6 @@ import 'package:notes_app/helper/app_navigator.dart';
 class HomeState extends State<Home> {
   List<Note> notes = [];
   bool isLoading = true;
-
   @override
   void initState() {
     super.initState();
