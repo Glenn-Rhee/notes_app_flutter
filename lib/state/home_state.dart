@@ -13,6 +13,7 @@ class HomeState extends State<Home> {
   }
 
   Future<void> fetchNotes() async {
+    print("cihuy ${notes.length}");
     try {
       final result = await Notes().getNotes();
       setState(() {
