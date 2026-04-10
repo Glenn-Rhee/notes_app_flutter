@@ -19,6 +19,7 @@ class HomeState extends State<Home> {
         notes = result ?? [];
         isLoading = false;
       });
+      print("cihuy ${notes.length}");
     } catch (e) {
       print("Error fetching notes: $e");
       setState(() {
